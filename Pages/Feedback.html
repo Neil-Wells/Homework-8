@@ -7,6 +7,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script> 
+        //this is the function to check if anything is in the submittable fields
+        function checkEntries()
+        {
+        var fName = document.getElementById("fName").value;
+        if(fName=="")
+        {
+            document.getElementById("fName").style.backgroundColor = "red";
+            document.getElementById("fName").foucus();
+        }
+        var lName = document.getElementById("lName").value;
+        if(lName=="")
+        {
+            document.getElementById("lName").style.backgroundColor = "red";
+        }
+        var Email = document.getElementById("Email").value;
+        if(Email=="")
+        {
+            document.getElementById("Email").style.backgroundColor = "red";
+        }
+        let checkbox = document.querySelector("#checkbox").checked;
+        if(checkbox==false)
+        {
+            window.alert("Ah ah ah you didn't say the magic word!");
+    }
+}    
+        
+        </script>
 </head>
 <body style="text-align: center;"><span class="greenlink"><h1>Thanks for visiting!</h1>
     <br style="text-align: center;"> Please contact me to tell me how good that spooky picture was, I am desperate for external validation!!!!!!</br>
@@ -15,9 +44,9 @@
         Last Name: <input type="text" id="lName"><br>
         Email: <input type="text" id="Email"><br>
 
-<input type="checkbox">
+<input type="checkbox" id="checkbox">
 By checking this box you agree to our Terms of Service agreement. Including ORGAN-CORP's unilateral and unimpeded access to your internal organs and their contents.<br>
-<button type="button" class="btn btn-success">Submit</button>
+<button type="button" class="btn btn-success" onclick="checkEntries();" onclick="checkbox();">Submit</button>
 
 
 
